@@ -24,6 +24,8 @@
 		</select>
 		</div>
 		<div id="view_6d" >
+			<p class="select1"><input type="button" value="自動ダイスロール" onclick="time();"></p>
+			<p class="select1"><input type="button" value="自動ダイスロールStop" onclick="tmrOff(0);"></p>
 			<p class="select1"><input type="button" value="ダイスロール" onclick="ring();	get_1d6();"></p>
 			<p>
 				<span	id = "view_1d6"><img src="img/6d1.svg" name="img_1d6" alt="img_1d6"	class="dies"></span>
@@ -33,7 +35,10 @@
 			</p>
 		</div>
 		<div id="view_10d"	style="display:none;">
+			<p class="select1"><input type="button" value="自動ダイスロール" onclick="time();"></p>
+			<p class="select1"><input type="button" value="自動ダイスロールStop" onclick="tmrOff(0);"></p>
 			<p class="select1"><input type="button" value="ダイスロール" onclick="ring();	get_1d10();"></p>
+			
 			<p>
 				<span	id = "view_1d10"><img src="img/10d1.svg" name="img_1d10" alt="img_1d10"	class="dies"></span>
 				<span	id = "view_2d10"	style="display:none;"><img	src="img/10d1.svg"	name="img_2d10"	alt="img_2d10"	class="dies"></span>
