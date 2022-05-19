@@ -34,7 +34,7 @@ function ring() {
 	
 	
 	
-	function get_1d6(num) {
+	function get_1d6() {
 		var dice1 = Math.floor(Math.random() * 6);
 		var dice2 = Math.floor(Math.random() * 6);
 		var dice3 = Math.floor(Math.random() * 6);
@@ -53,19 +53,16 @@ function ring() {
 				document.getElementById('condice1d6').innerHTML = "<h1>" + (dice1 + dice2 + dice3 + 3) + "</h1>";
 			}
 		}
-		if(num==0){
+		
 		count--;
 		if (count >=1 )	{ tim = setTimeout("get_1d6(0)",mSec);}
 		if (count ==0 )	{ count = 20 ;} 
-		}else if(num==1){
-			count--;
-			if (count >=1 )	{ tim = setTimeout("get_1d6(1)",mSec);}
-			if (count ==0 )	{ count = 20 ;} 
-		}
+		
+		
 	}
 	
 	
-	function get_1d10(num) {
+	function get_1d10() {
 		var dice1 = Math.floor( Math.random() *10) ;
 		var dice2 = Math.floor( Math.random() *10) ;
 		var dice3 = Math.floor( Math.random() *10) ;
@@ -84,15 +81,11 @@ function ring() {
 				document.getElementById('condice1d10').innerHTML = "<h1>" + (dice1 + dice2 + dice3 + 3) + "</h1>";
 			}
 		}
-		if(num==0){
+		
 		count--;
 		if (count >=1 )	{ tim = setTimeout("get_1d10(0)",mSec);}
 		if (count ==0 )	{ count = 20 ;} 
-		}else if(num==1){
-			count--;
-			if (count >=1 )	{ tim = setTimeout("get_1d10(1)",mSec);}
-			if (count ==0 )	{ count = 20 ;} 
-		}
+		
 	}
 	
 	
@@ -118,11 +111,7 @@ function ring() {
 	
 	function sai(){
 		
-		var os = "hello";                // OS名の取得
-		
-		if (navigator.userAgent.indexOf("iPhone")!=-1) os="iPhone";
-		if (navigator.userAgent.indexOf("iPad")!=-1) os="iPad";
-		if (navigator.userAgent.indexOf("iPod")!=-1) os="iPod";
+		var os = navigator.platform;                // OS名の取得
 			if(os === "iPhone" || os === "iPad" || os === "iPod") {     // iOSなら
 				aX *= -1;                               // 加速度の正負を反転させる
 				aY *= -1;                               // a *= b は a = a * b の意味
