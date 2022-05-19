@@ -1,0 +1,45 @@
+<!DOCTYLE html>
+<html lang = "ja">
+	<head>
+		<meta	name="viewport"	content = "width = device-width, initial-scale = 1">
+		<meta	charset = "utf-8">
+		<title>webサイコロシミュレータ</title>
+		<link	rel = "stylesheet"	href = "style.css">
+		<script	src = "js/dice.js"	type = "text/javascript"></script>
+		<script	src = "js/change.js"	type = "text/javascript"></script>
+	</head>
+	<body>
+		<audio id="DiceSound" preload="auto">
+			<source src="img/dice.wav" type="audio/wav">
+			<source src="img/dice.mp3" type="audio/mp3">
+		</audio>
+		<div class="select1" >
+		<select id="n_dice"	class="n_dice"	onchange="viewChange();">
+			<option value="select_1d6">1d6</option>
+			<option value="select_2d6">2d6</option>
+			<option value="select_3d6">3d6</option>
+			<option value="select_1d10">1d10</option>
+			<option value="select_2d10">2d10</option>
+			<option value="select_3d10">3d10</option>
+		</select>
+		</div>
+		<div id="view_6d" >
+			<p class="select1"><input type="button" value="ダイスロール" onclick="ring();	get_1d6();"></p>
+			<p>
+				<span	id = "view_1d6"><img src="img/6d1.svg" name="img_1d6" alt="img_1d6"	class="dies"></span>
+				<span	id = "view_2d6"	style="display:none;"><img	src="img/6d1.svg"	name="img_2d6"	alt="img_2d6"	class="dies"></span>
+				<span	id = "view_3d6"	style="display:none;"><img	src="img/6d1.svg"	name="img_3d6"	alt="img_3d6"	class="dies"></span>
+				<span id="condice1d6"	class="result"></span>
+			</p>
+		</div>
+		<div id="view_10d"	style="display:none;">
+			<p class="select1"><input type="button" value="ダイスロール" onclick="ring();	get_1d10();"></p>
+			<p>
+				<span	id = "view_1d10"><img src="img/10d1.svg" name="img_1d10" alt="img_1d10"	class="dies"></span>
+				<span	id = "view_2d10"	style="display:none;"><img	src="img/10d1.svg"	name="img_2d10"	alt="img_2d10"	class="dies"></span>
+				<span	id = "view_3d10"	style="display:none;"><img	src="img/10d1.svg"	name="img_3d10"	alt="img_3d10"	class="dies"></span>
+				<span id="condice1d10"	class="result"></span>
+			</p>
+		</div>
+	</body>
+</html>
