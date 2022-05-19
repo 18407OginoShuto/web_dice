@@ -118,7 +118,11 @@ function ring() {
 	
 	function sai(){
 		
-		var os = navigator.platform;                // OS名の取得
+		var os = "enable";                // OS名の取得
+		if (navigator.userAgent.indexOf("iPhone")!=-1) os="iPhone";
+		if (navigator.userAgent.indexOf("ipad")!=-1) os="iPad";
+		if (navigator.userAgent.indexOf("ipod")!=-1) os="iPod";
+		
 			if(os === "iPhone" || os === "iPad" || os === "iPod") {     // iOSなら
 				aX *= -1;                               // 加速度の正負を反転させる
 				aY *= -1;                               // a *= b は a = a * b の意味
@@ -170,11 +174,11 @@ function ring() {
 	
 		if (num1>=5,num2>=250){
 			//ran = Math.floor( Math.random() *(max))+1 ; //ランダム
-			var dice1 = Math.floor( Math.random() *(max)-1)+1 ;
+			var dice1 = Math.floor( Math.random() *(max)-1) ;
 			old_dice1 = dice1;
-			var dice2 = Math.floor( Math.random() *(max)-1)+1 ;
+			var dice2 = Math.floor( Math.random() *(max)-1) ;
 			old_dice2 = dice2;
-			var dice3 = Math.floor( Math.random() *(max)-1)+1 ;
+			var dice3 = Math.floor( Math.random() *(max)-1) ;
 			old_dice3 = dice3;
 			/*if(dice_or == 10){
 				get_1d10(1);
