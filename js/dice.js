@@ -96,20 +96,11 @@ window.addEventListener("devicemotion", (dat) => {
 });
 
 function time(){
-	var pc = "hello";
-	if (navigator.userAgent.indexOf("Win")!=-1) pc="Windows";
-	if (navigator.userAgent.indexOf("Mac")!=-1) pc="MacOS";
-	if (navigator.userAgent.indexOf("X11")!=-1) pc="UNIX";
-	if (navigator.userAgent.indexOf("Linux")!=-1) pc="Linux";
-		if(pc === "Windows" || pc === "Mac" || pc === "Linux" || pc === "UNIX"){
-			
-			target = document.getElementById("output");
-            target.innerHTML = "fuck";
-		}else{
+	
 			timer = window.setInterval(() => {
         		sai();
     		}, 33); // 33msごとに（1秒間に約30回）
-		}
+		
 }
 
 
@@ -217,14 +208,6 @@ function random(num1,num2){
 	}
 	}
 	
-    /*txt.innerHTML = ran  + "<br>" + "<br>"
-                  + max  + "<br>" + "<br>"
-                  + "x: " + aX + "<br>"         // x軸の値
-                  + "y: " + aY + "<br>"         // y軸の値
-                  + "z: " + aZ + "<br>"         // z軸の値
-                  + "alpha: " + alpha + "<br>"
-                  + "beta: " + beta + "<br>"
-                  + "gamma: " + gamma;*/
 }
 
 function tmrOff(num){
